@@ -1,129 +1,289 @@
-h1,h2,li{
-	font-style: oblique;
+/* =========================
+   Navigation Menu
+   ========================= */
+.menu {
+  background-color: #004080;
+  color: #fff;
+  padding: 2rem 3rem;   /* increased top padding to lower the whole nav bar */
+  position: relative;
 }
 
-.input-box {
-    margin-bottom: 15px;
-    position: relative;
+.menu-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;            /* lowered slightly */
+  left: 15px;
+  color: white;
 }
 
-body{
-	backround-image:url(media/rugby_Backroundpage.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment:scroll;
-	min-height:100vh;
-	display: block;
-	overflow-y:auto;
-}
-.box{
-	color:#800080;
-	font-style: oblique;
-	font-size:8rem;
-	text-transform:capitalize;
-	text-shadow: 
-	1px 1px 1px wheat,
-	2px 2px 2px wheat;
-	margin: 23px;
-	padding: 20px;
-	border: 1px solid wheat;
-	border-radius: 5px;
+/* Desktop nav list */
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;   /* vertically centers items */
 }
 
-.container{
-	padding: 20px;
-    border-radius: 25px;
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-	min-height: 550px;
-	display: flex;
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem; /* adds clickable padding around text */
+  transition: color 0.3s ease;
+  display: inline-block;    /* ensures padding applies properly */
+}
+.menu-link:hover {
+  color: #800080;
+}
+
+/* Profile Picture */
+.profile {
+  position: absolute;
+  top: 20px;            
+  right: 15px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =========================
+   Footer Navigation / Footnotes
+   ========================= */
+footer {
+  background: #222;         
+  color: #ccc;               
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.footer-nav a:hover {
+  color: #00B5E2;            /* This is highlight color on hover */
+  border-bottom: 2px solid #00B5E2; /* This will do the underline effect */
+}
+
+/* =========================
+   Hamburger / Off-Screen Menu
+   ========================= */
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #6F86FF;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1) { top: 25%; }
+.ham-menu span:nth-child(3) { top: 75%; }
+
+.off-screen-menu {
+  background-color: rgb(34, 37, 49);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  transition: .3s ease;
+}
+.off-screen-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.off-screen-menu.active { right: 0; }
+
+/* =========================
+   Confirmed Orders Section
+   ========================= */
+.confirmed-orders {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.confirmed-orders h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+.view-confirmed-orders p {
+  background: #e6f2ff;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+/* =========================
+   Calendar Section
+   ========================= */
+.calendar {
+  background-color: #f0f8ff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.calendar h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.calendar-weekdays div {
+  font-weight: bold;
+  color: #004080;
+  background-color: #e6f2ff;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+.calendar-week {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-week div {
+  background-color: #ccc;
+  margin: 5px;
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+/* Calendar + Images Container */
+.calendar-images-container {
+  display: flex;
+  gap: 2rem;              /* space between calendar and images */
+  align-items: flex-start;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.calendar-images {
+  display: flex;
+  flex-direction: column; /* stack images vertically */
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.calendar-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive: stack calendar and images on small screens */
+@media (max-width: 768px) {
+  .calendar-images-container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%, 15%);
+  }
 }
 
-
-form {
-    margin: 250px auto;
-    padding: 20px;
-    border: 2px solid #800080;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 400px;
-    background-color: palegreen;
+/* =========================
+   Contact Us Section
+   ========================= */
+.contact-us {
+  text-align: center;
+  background-color: #00B5E2;
+  padding: 2rem;
+  color: #fff;
+}
+.contact-us h2 {
+  margin-bottom: 1rem;
+}
+.contact-us ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-us li {
+  margin: 0.5rem 0;
 }
 
-html{
-	box-sizing: border-box;
+/* =========================
+   Images
+   ========================= */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-input, textarea, select, button {
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select{
-	 border: 1px solid #000000;
-    border-radius: 4px;
-    padding: 5px;
-    width: 100%;
-    max-width: 400px;
-}
-
-button {
-    background-color: #008080;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-
-button:hover {
-    background-color: #0056b3;
-}
-
-
-@media (max-width: 540px) {
-    .container {
-        max-width: 500px;
-		padding: 0 20px;
-		flex-direction: column;
-		transform: translate(-50%, 10%);
-    }
-	
-	.wrapper{
-		max-width: 600px;
-		min-height: 100vh;
-		transform: translate(0%, 15%);
-	}
-	
-	.form-box{
-		width: 100%;
-		height: 500px;
-	}
-}
-@media (min-width: 1020px) {
-    .container {
-        max-width: 600px;
-        transform: translate(-50%, 5%);
-    }
-
-
+/* =========================
+   Responsive Styles
+   ========================= */
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .menu {
+    padding: 0.5rem 0;
+  }
+  .profile {
+    height: 60px;
+    width: 60px;
+  }
 }
