@@ -86,8 +86,8 @@ footer p {
 }
 
 .footer-nav a:hover {
-  color: #00B5E2;            /* This is highlight color on hover */
-  border-bottom: 2px solid #00B5E2; /* This will do the underline effect */
+  color: #00B5E2;            
+  border-bottom: 2px solid #00B5E2; 
 }
 
 /* =========================
@@ -166,7 +166,6 @@ footer p {
   background-color: #f0f8ff;
   padding: 2rem;
   margin: 2rem auto;
-  max-width: 900px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
@@ -201,34 +200,47 @@ footer p {
   padding: 0.5rem;
   border-radius: 4px;
 }
-/* Calendar + Images Container */
-.calendar-images-container {
+
+/* =========================
+   Calendar with Images on Each Side
+   ========================= */
+.calendar-layout {
   display: flex;
-  gap: 2rem;              /* space between calendar and images */
+  justify-content: center;
   align-items: flex-start;
+  gap: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
 }
 
-.calendar-images {
-  display: flex;
-  flex-direction: column; /* stack images vertically */
-  gap: 1.5rem;
+.calendar-side {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.calendar-images img {
+.calendar-side img {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Responsive: stack calendar and images on small screens */
+/* Calendar stays centered */
+.calendar {
+  flex: 2;
+}
+
+/* Responsive: stack vertically on small screens */
 @media (max-width: 768px) {
-  .calendar-images-container {
+  .calendar-layout {
     flex-direction: column;
     align-items: center;
+  }
+  .calendar {
+    flex: unset;
+    width: 100%;
   }
 }
 
