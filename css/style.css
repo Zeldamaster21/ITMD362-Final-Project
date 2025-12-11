@@ -424,6 +424,24 @@ footer p {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Buy Now Button */
+.buy-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #004080;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: #800080;
+  transform: scale(1.05);
+}
+
 /* =========================
    Images
    ========================= */
