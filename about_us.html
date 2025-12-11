@@ -1,45 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-	
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/rest.css">
-	
-	<script src="js/script.js" defer></script>
-  </head>
-  
-  
-  <body>
-  <!-- Header / Navagation-->
-       <div class="menu" id="navigation-menu">
-        <h1 class="menu-title"> MealZoom </h1>
-        <ul class="menu-list">
-          <li class="menu item"><a href="index.html" class="menu-link">Home</a></li>
-          <li class="menu item"><a href="products.html" class="menu-link">Products</a></li>
-          <li class="menu item"><a href="faq.html" class="menu-link">FAQ</a></li>
-		  <li class="menu item"><a href="about_us.html" class="menu-link">About Us</a></li>
-          <li class="menu item"><a href="contact_us.html" class="menu-link">Tutoring info</a></li>
-          <li class="menu item"><a href="checkout.html" class="menu-link">Payment menu</a></li>
-		  <li class="menu item"><a href="gallery.html" class="menu-link">Payment menu</a></li>
-        </ul>
-		
-     </div>
-	 
-	 	 <!--insert an about us section-->
-	 <section class= "about">
-	 <h2> About us</h2>
-	 <p>Back in the day when this first start we had no food waiting for us when we got off work some of
-	 us worked out and which those same people didn’t have enouch time to cook because they had to work
-	 and they wanted to kepp their hobbie </p>
-	 <!--insert picutre here realting to food-->
-	 <img src= "Media/Tutoring1.jpg" alt="Tutoring in progress" class="tutoring">
-	 <p>Here is how we first started</p>
-	 <!-- insert a picture on like a warehouse-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealZoom | About Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/meyersreset-and-normalize-form.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
 
-	 </section>
+  <!-- Header / Navigation -->
+  <header class="menu" id="navigation-menu">
+    <h1 class="menu-title">MealZoom</h1>
+    
+    <!-- Desktop Navigation -->
+    <ul class="menu-list">
+      <li><a href="index.html" class="menu-link">Home</a></li>
+      <li><a href="products.html" class="menu-link">Products</a></li>
+      <li><a href="faq.html" class="menu-link">FAQ</a></li>
+      <li><a href="about_us.html" class="menu-link active">About Us</a></li>
+      <li><a href="contact_us.html" class="menu-link">Contact Us</a></li>
+      <li><a href="checkout.html" class="menu-link">Checkout</a></li>
+      <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+    </ul>
+
+    <!-- Profile Icon -->
+    <img src="media/PF-pic.jpg" alt="profile icon" class="profile">
+
+    <!-- Hamburger Menu -->
+    <div class="ham-menu" aria-expanded="false" aria-controls="offScreenMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Off-Screen Menu -->
+    <div class="off-screen-menu" id="offScreenMenu">
+      <ul>
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="products.html" class="menu-link">Products</a></li>
+        <li><a href="faq.html" class="menu-link">FAQ</a></li>
+        <li><a href="about_us.html" class="menu-link">About Us</a></li>
+        <li><a href="contact_us.html" class="menu-link">Contact Us</a></li>
+        <li><a href="checkout.html" class="menu-link">Checkout</a></li>
+        <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+      </ul>
+    </div>
+  </header>
 	 
-	</body>
-  </html>
+  <!-- About Us Section -->
+  <section class="about-us">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p><strong>MealZoom</strong> began with a simple idea: making life easier for people who balance work, hobbies, and health. Back when we started, many of us came home from long shifts with no time to cook, especially those who wanted to keep up with fitness or other passions.</p>
+        <p>We saw the need for quick, nutritious meals that didn’t compromise on taste. That’s how MealZoom was born — combining convenience with quality food, so you can focus on what matters most.</p>
+        <p>From humble beginnings to today, our mission remains the same: helping busy people eat better, live healthier, and save time.</p>
+      </div>
+      <div class="about-images">
+        <img src="media/warehouse_employee.jpg" alt="warehouse operations" class="warehouse">
+        <img src="media/working.jpg" alt="early team working" class="workers">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <ul>
+      <li>Email: MealZoomassist@gmail.com</li>
+      <li>Customer Service Number: (555) 123-7890</li>
+      <li>27 Larkspur Avenue, Kensington, Cape Town 8001, South Africa</li>
+      <li>Fax: +1-555-482-9374</li>
+    </ul>
+  </section>
+	 
+  <!-- Footer Navigation -->
+  <footer>
+    <p>&copy; 2025 MealZoom</p>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </footer>
+  
+</body>
+</html>
