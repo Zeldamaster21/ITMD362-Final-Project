@@ -4,7 +4,7 @@
 .menu {
   background-color: #004080;
   color: #fff;
-  padding: 2rem 3rem;   /* increased top padding to lower the whole nav bar */
+  padding: 2rem 3rem;  
   position: relative;
 }
 
@@ -12,7 +12,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   position: absolute;
-  top: 15px;            /* lowered slightly */
+  top: 15px;            
   left: 15px;
   color: white;
 }
@@ -481,6 +481,37 @@ footer p {
   transform: scale(1.05);
 }
 
+/* =========================
+   FAQ Page
+   ========================= */
+.faq {
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.faq h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: #333;
+  line-height: 1.6;
+}
 
 /* =========================
    Images
